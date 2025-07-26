@@ -1,0 +1,38 @@
+@import "../Animations/Animations";
+
+@import "../ColorSystem/MainColors";
+
+@mixin dropdown-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 100%;
+  right: -10%;
+}
+
+@mixin dropdown {
+  background-color: $bg-dark1;
+  width: 15vw;
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transform-origin: top;
+  animation: drop 0.2s ease-out forwards;
+  z-index: 9999;
+
+  &__content {
+    padding: 1rem 0;
+    padding-left: 2vw;
+    display: flex;
+    border-radius: 1rem;
+    flex-direction: column;
+    text-decoration: none;
+
+    &:hover {
+      background-color: $accent1;
+    }
+  }
+}
